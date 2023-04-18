@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./dist/main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Fanorona</h1>
+        <div>
+            <button class="button">restart</button>
+        </div>
+    </header>
+    <div class="winlog__container">
+        <p id="winlog"></p>
+    </div>
+    <main>
+        <div class="board">
+            <div>
+                <p id="player2">PLAYER 2</p>
+            </div>
+            <div>
+                <canvas width="600" height="600"></canvas>
+            </div>
+            <div class="player2">
+                <p id="player1">PLAYER 1</p>
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --background-color: #2A1567;
+
+        --h1-fontsize: 32px;
+
+        --fanorona-width: 600px;
+        --margin-calc: calc((100vw - var(--fanorona-width))/2);
+
+        --button-color: #6C48D2;
+        --button-fontsize: 24px;
+        --input-radius: 10px;
+
+
+    }
+
+    html {
+        background: var(--background-color);
+    }
+
+    body {
+        color: white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: grid;
+    }
+
+    .winlog__container {
+        margin-left: var(--margin-calc);
+        margin-right: var(--margin-calc);
+        display: flex;
+        justify-content: center;
+        margin: 15px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+    }
+    p {
+        font-size: var(--h1-fontsize);
+    }
+    p.green {
+        color: "green"
+    }
+
+    .button {
+        background: var(--button-color);
+        border: none;
+        color: white;
+        font-size: var(--button-fontsize);
+        padding: 0.8em 1em;
+        border-radius: var(--input-radius);
+
+    }
+
+    .player2 {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .board {
+        margin-left: var(--margin-calc);
+        margin-right: var(--margin-calc);
+    }
+
+    canvas {
+        background-color: #12142e;
+        border-radius: 20px;
+    }
+</style>
+
+</html>
